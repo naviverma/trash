@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#timeline {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 3px;
+    background-color: #333;
+    width: 0%; /* Initially the line has 0% width */
+    transition: width 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.name {
+    display: inline-block;  
+    padding: 5px 15px;
+    margin: 0 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.name:hover {
+    transform: translateY(-5px);
+}
+
+.dash {
+    display: none;  /* Hide the dash initially */
+    width: 10px;
+    height: 3px;
+    background-color: red; 
+    margin: 0 5px;
+}
+
+.last-cleared {
+    background-color: red; 
+    color: white;
+}
